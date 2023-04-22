@@ -18,6 +18,8 @@ add_executable(main
   main_component.cpp
 )
 
+set_target_properties(main PROPERTIES POSITION_INDEPENDENT_CODE OFF)
+
 target_link_libraries(main
   dll_relay
   dll
