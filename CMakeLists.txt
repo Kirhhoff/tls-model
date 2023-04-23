@@ -20,7 +20,14 @@ add_executable(main
 
 set_target_properties(main PROPERTIES POSITION_INDEPENDENT_CODE OFF)
 
+# with such dependency order, @dll_global_preempted_by_dll_relay will be 0x99999999
 target_link_libraries(main
   dll_relay
   dll
 )
+
+# with such dependency order, @dll_global_preempted_by_dll_relay will be 0x88888888
+# target_link_libraries(main
+#   dll
+#   dll_relay
+# )
