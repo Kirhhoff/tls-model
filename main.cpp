@@ -5,7 +5,6 @@
 
 void main_reference()
 {
-  printf("main_reference: hidden = %p\n", executable_hidden);
   printf("main_reference: global = %p\n", executable_global);
 }
 

@@ -3,11 +3,11 @@
 #include "dll_relay.hpp"
 #include "dll_relay_internal.hpp"
 
-static thread_local int *dll_relay_static = reinterpret_cast<int *>(0x44444444);
-__attribute__((visibility("hidden"))) thread_local int *dll_relay_hidden = reinterpret_cast<int *>(0x55555555);
-thread_local int *dll_relay_global = reinterpret_cast<int *>(0x66666666);
-thread_local int *dll_relay_global_preempted_by_executable = reinterpret_cast<int *>(0x99999999);
-thread_local int *dll_global_preempted_by_dll_relay = reinterpret_cast<int *>(0x99999999);
+static thread_local int *dll_relay_static = reinterpret_cast<int *>(0x33333333);
+__attribute__((visibility("hidden"))) thread_local int *dll_relay_hidden = reinterpret_cast<int *>(0x44444444);
+thread_local int *dll_relay_global = reinterpret_cast<int *>(0x55555555);
+thread_local int *dll_relay_global_preempted_by_executable = reinterpret_cast<int *>(0x88888888);
+thread_local int *dll_global_preempted_by_dll_relay = reinterpret_cast<int *>(0x88888888);
 
 void dll_relay_reference()
 {
