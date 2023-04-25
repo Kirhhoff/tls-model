@@ -24,6 +24,7 @@ add_custom_command(
 
 add_library(dll_relay SHARED
   dll_relay.cpp 
+  dll_relay_component.cpp 
 )
 
 set_target_properties(dll_relay PROPERTIES POSITION_INDEPENDENT_CODE ON)
